@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap');
+:root { font-family: 'DM Sans', Arial, sans-serif; color: #192a37; background: #f7f8f4; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.site-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.navbar { height: 88px; display: flex; align-items: center; justify-content: space-between; padding: 0 max(6%, calc((100vw - 1150px)/2)); background: #fff; box-shadow: 0 1px 0 #e9ede9; }
+.brand { color: #192a37; text-decoration: none; font-size: 21px; font-weight: 700; letter-spacing: -.8px; }
+.brand>span:last-child { color: #669480; }
+.brand-icon { color: #68a78d; font-size: 28px; margin-right: 7px; }
+.navbar nav { display: flex; gap: 38px; }
+.navbar nav a { text-decoration: none; color: #6c7b80; font-size: 15px; font-weight: 700; padding: 33px 2px 28px; border-bottom: 3px solid transparent; }
+.navbar nav a:hover, .navbar nav a.active { color: #2c6654; border-bottom-color: #75ad96; }
+.page { position: relative; width: 100%; flex: 1; padding: 90px max(8%, calc((100vw - 1090px)/2)); overflow: hidden; }
+.eyebrow { color: #50836d; font-size: 12px; font-weight: 700; letter-spacing: 3px; margin-bottom: 18px; }
+h1 { font-size: clamp(42px, 6vw, 78px); letter-spacing: -2px; line-height: 1.1; margin: 0 0 28px; }
+h1 em { font-family: 'Playfair Display', Georgia, serif; color: #77a88e; font-weight: 600; }
+p { line-height: 1.7; }
+.home-page { background: #f0f6ee; min-height: 620px; }
+.home-page>p { font-size: 18px; color: #65736e; max-width: 495px; margin: 0 0 35px; }
+.primary-button { display: inline-flex; align-items: center; gap: 20px; padding: 16px 24px; border-radius: 10px; background: #285c4c; color: white; text-decoration: none; font-weight: 700; }
+.primary-button:hover { background: #1d493b; }
+.hero-art { position: absolute; right: 8%; top: 130px; width: 370px; height: 370px; background: #d8e9dd; border-radius: 43% 57% 60% 40%; transform: rotate(-12deg); }
+.hero-art span { position: absolute; color: #39725e; }
+.hero-art span:nth-child(1) { font-size: 240px; top: 30px; left: 100px; }
+.hero-art span:nth-child(2) { font-size: 95px; top: -25px; left: -30px; color: #e6a870; }
+.hero-art span:nth-child(3) { font-size: 62px; right: 0; bottom: 20px; color: #e8b888; }
+.about-page { background: #fff8ed; }
+.about-page h1 em { color: #d5966f; }
+.about-page .eyebrow { color: #b87952; }
+.about-grid { display: grid; grid-template-columns: 42% 1fr; align-items: center; gap: 65px; margin-top: 20px; }
+.about-art { display: flex; justify-content: center; align-items: center; height: 330px; border-radius: 25px; background: #f8dfc4; color: #c97f4f; font-size: 240px; }
+.about-copy h2 { font-size: 28px; margin: 0 0 12px; }
+.about-copy p { color: #75665d; }
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.pill-row span { background: #fae5d1; border-radius: 20px; padding: 9px 14px; font-size: 13px; color: #855b3f; font-weight: 700; }
+.contact-page { background: #eef4fb; }
+.contact-page h1 em { color: #719cce; }
+.contact-page .eyebrow { color: #527ead; }
+.contact-intro { max-width: 610px; color: #63768a; font-size: 17px; margin-bottom: 38px; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 19px; }
+.contact-card { min-height: 220px; padding: 30px; background: white; border-radius: 20px; box-shadow: 0 8px 25px #2b608010; }
+.contact-icon { font-size: 35px; color: #6294c6; }
+.contact-card h2 { margin: 18px 0 6px; font-size: 21px; }
+.contact-card p { color: #64778d; font-size: 14px; overflow-wrap: anywhere; }
+footer { text-align: center; padding: 22px; color: #81908d; background: #fff; font-size: 12px; }
+@media(max-width: 900px) { .hero-art { opacity: .18; right: -100px; } .home-page>p, .home-page h1 { position: relative; z-index: 1; } .about-grid { gap: 28px; } }
+@media(max-width: 650px) { .navbar { padding: 0 18px; height: 76px; } .brand { font-size: 16px; } .brand-icon { font-size: 20px; } .navbar nav { gap: 13px; } .navbar nav a { font-size: 13px; padding: 27px 0 23px; } .page { padding: 64px 24px; } .about-grid, .contact-grid { grid-template-columns: 1fr; } .about-art { height: 200px; font-size: 150px; } .hero-art { right: -180px; } }
